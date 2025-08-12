@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Age Calculator</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet"/>
+  <!-- Flatpickr CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1 class="main-header">AGE CALCULATOR</h1>
+    <div class="input-wrapper">
+      <input
+        type="text"
+        id="date-input"
+        placeholder="DOB: YYYY-MM-DD (Pick from calendar)"
+        aria-label="Select your birthdate"
+        autocomplete="off"
+      />
+      <button id="calc-age-btn">Calculate</button>
+    </div>
+    <div class="error-message" id="error-message"></div>
+
+    <div class="output-wrapper" id="output-block" style="display:none;">
+      <div><span id="years">-</span><p>Years</p></div>
+      <span class="colon">:</span>
+      <div><span id="months">-</span><p>Months</p></div>
+      <span class="colon">:</span>
+      <div><span id="days">-</span><p>Days</p></div>
+      <span class="colon">:</span>
+      <div><span id="hours">-</span><p>Hours</p></div>
+      <span class="colon">:</span>
+      <div><span id="minutes">-</span><p>Minutes</p></div>
+      <span class="colon">:</span>
+      <div><span id="seconds">-</span><p>Seconds</p></div>
+    </div>
+
+    <div class="disclaimer">
+      <p><strong>Note:</strong> The age is calculated from midnight 00:00 am of your birthdate.</p>
+    </div>
+  </div>
+
+  <!-- Luxon -->
+  <script src="https://cdn.jsdelivr.net/npm/luxon@3/build/global/luxon.min.js"></script>
+  <!-- Flatpickr -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <!-- Custom Script -->
+  <script src="app.js"></script>
+</body>
+</html>
