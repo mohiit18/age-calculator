@@ -126,3 +126,4 @@ function processAge() {
   calculateAgeLive();
   startClock();
 }
+
